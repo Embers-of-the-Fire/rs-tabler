@@ -1,17 +1,12 @@
+
 from tabler import tabler, utils
 
-table = utils.auto_table_from(
-    [
-        ["123", 13],
-        [
-            utils.auto_cell(None),
-            utils.auto_cell("777").with_formatter([tabler.settings.Formatter.Bold]),
-        ],
-    ]
+table = utils.auto_table_create(
+    header = ["Header Left", utils.auto_cell("Header Right").with_align(tabler.settings.Align.Right)],
+    content = [["Row", utils.auto_cell("Content").with_align(tabler.settings.Align.Right)] for _ in range(2)],
+    splitter = True
 )
 table.border = tabler.settings.Border.All
-
-print(type(table), table.table)
 
 res = table.render(tabler.settings.Renderer.Normal)
 

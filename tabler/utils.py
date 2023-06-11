@@ -71,7 +71,7 @@ def auto_table_create(
     """
     Create a table with automatical cells.
     """
-    return tabler.table.Table(
+    return tabler.table.Table.create(
         header=list(map(lambda cell: auto_cell(cell), header)),
         content=list(
             map(lambda row: list(map(lambda cell: auto_cell(cell), row)), content)

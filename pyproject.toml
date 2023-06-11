@@ -3,7 +3,7 @@ requires = ["maturin>=0.15,<0.16"]
 build-backend = "maturin"
 
 [project]
-name = "tabler"
+name = "rs-tabler"
 requires-python = ">=3.7"
 readme = "README.md"
 license = { text = "MIT or Apache-2.0" }

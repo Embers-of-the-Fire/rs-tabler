@@ -1,0 +1,31 @@
+[package]
+name = "tabler"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+authors = ["Embers-of-the-Fire<stellarishs@163.com>"]
+readme = "README.md"
+include = [
+    "tabler/**/*.py",
+    "tabler/**/*.pyi",
+    "tabler/**/*.typed",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "pyproject.toml",
+    "README.md"
+]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+name = "tabler"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+pyo3 = { version = "0.19.0", features = [
+    "abi3-py37",
+    "extension-module",
+    "generate-import-lib",
+] }
+table_formatter = "0.5.1"
+colored = "2.0.0"
+itertools = "0.10.5"

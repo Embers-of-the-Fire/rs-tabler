@@ -236,6 +236,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "rs-tabler"
+version = "0.1.0"
+dependencies = [
+ "colored",
+ "itertools",
+ "pyo3",
+ "table_formatter",
+]
+
+[[package]]
 name = "scopeguard"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -278,16 +288,6 @@ dependencies = [
  "colored",
  "itertools",
  "thiserror",
-]
-
-[[package]]
-name = "tabler"
-version = "0.1.0"
-dependencies = [
- "colored",
- "itertools",
- "pyo3",
- "table_formatter",
 ]
 
 [[package]]
